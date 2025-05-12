@@ -11,4 +11,9 @@ import com.seccion5.orm5.model.Paciente;
 public interface PacienteRepository extends JpaRepository<Paciente, Integer>{
     List<Paciente> findAll();
     
+
+    @SuppressWarnings("unchecked")
+    Paciente save(Paciente paciente);
+        
+    Paciente findById(int id);
 }
